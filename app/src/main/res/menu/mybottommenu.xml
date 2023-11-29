@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/timeline"
+        android:title="Timeline"
+        android:icon="@drawable/timeline"/>
+    <item
+        android:id="@+id/itinerary"
+        android:title="Itinerary"
+        android:icon="@drawable/itinerary"/>
+    <item
+        android:id="@+id/add"
+        android:title="Add"
+        android:icon="@drawable/add"
+        />
+    <item
+        android:id="@+id/calendar"
+        android:title="Calendar"
+        android:icon="@drawable/calendar"/>
+    <item
+        android:id="@+id/map"
+        android:title="Map"
+        android:icon="@drawable/map"/>
+</menu>

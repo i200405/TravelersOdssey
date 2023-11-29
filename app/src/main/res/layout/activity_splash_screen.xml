@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8DFE9"
+    android:weightSum="5"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.25">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navbar"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_weight="0.75">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:textStyle="italic"
+            android:paddingRight="25dp"
+            android:text="Traveler's"
+            android:textColor=" #689368"
+            android:layout_weight="0.75" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="40dp"
+            android:paddingLeft="25dp"
+            android:text="Odyssey"
+            android:textColor="#91C34A"
+            android:layout_weight="1.25" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:paddingTop="20dp"
+            android:textColor="#054C5A"
+            android:textStyle="italic"
+            android:textSize="28dp"
+            android:text="Explore Record Remember" />
+    </LinearLayout>
+
+
+</LinearLayout>
