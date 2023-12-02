@@ -1,5 +1,6 @@
 package com.project.i200557_i200405_i200590;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Calendar;
 
 
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton timeline, itinerary, add, calendar, map;
     LinearLayout Frag;
+
+    ImageButton logout;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
         calendar= findViewById(R.id.calendar);
         map = findViewById(R.id.map);
         Frag = findViewById(R.id.frag_linear);
+        mAuth = FirebaseAuth.getInstance();
+        logout = findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Intent intent = new Intent(MainActivity.this, SignIn.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         if (savedInstanceState == null) { // To prevent overlapping fragments on configuration changes
             TimelineFragment timelineFragment = new TimelineFragment();
